@@ -28,10 +28,10 @@ categories: 周计划 杂
         3，用户注册的相对应的signal handler
 
 对于前面两种情况很容易理解和实现，这里主要要说的是第三种情况，这个情况的麻烦在于它要先从kernel态切换到user态执行handler，之后再切回kernel态，直到回到进程在进入kernel之前的状态，而这些就要很仔细地考虑栈里面数据和进程状态的维护了。在ULK中用了一张图来表示整个过程：
-![Catching a Signal](http://ytliu.github.com/images/2012-02-19-1.jpg "The process of catching a signal from ULK")
+![Catching a Signal](http://ytliu.info/images/2012-02-19-1.jpg "The process of catching a signal from ULK")
 
 简单来说整个流程是这样的：在处理完中断或异常将从kernel态回到用户态之前，kernel会调用do_signal()函数，在这个函数里面会调用handle_signal()函数，这个函数首先创建用户态所需要的栈环境，这个栈是长这样的：
-![Frame on the User Mode Stack](http://ytliu.github.com/images/2012-02-19-2.jpg "the frame on the user mode stack from ULK")
+![Frame on the User Mode Stack](http://ytliu.info/images/2012-02-19-2.jpg "the frame on the user mode stack from ULK")
 
 其实主要就是把return address改成用户自行定义的signal handler的入口，然后进入用户态，执行相应的代码，当执行结束之后，会根据栈顶的pretcode，调用一个sigreturn()或rt_sigreturn()系统调用，回到kernel态，执行流继续下去。其实这里面还有很多细节的，包括那些栈里面内容的含义，如何处理嵌套signal等等，这些需要更仔细地参阅相关资料了。
 
@@ -57,7 +57,7 @@ categories: 周计划 杂
         检查的优化：（p~p')>>table[p>>slot_size] == 0
 
 这个优化也很好理解，对于计算出的指针p'，如果它不越界，当且仅当它和p的不同只发生在e least significant bits上。这个baggy bounds checker的整个流程是这样的：
-![Overall System Architecture](http://ytliu.github.com/images/2012-02-19-3.png "Architecture")
+![Overall System Architecture](http://ytliu.info/images/2012-02-19-3.png "Architecture")
 
 当然这中间还有很多细节，我不想一一列出来讲，而且说实话我也看的不是很懂，最后想提提这个paper的limitation，这个最后作者也有说到，除了它列出的几点：
         arithemtic on integers holding addresses is unchecked
