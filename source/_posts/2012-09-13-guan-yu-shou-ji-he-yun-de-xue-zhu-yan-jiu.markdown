@@ -3,7 +3,7 @@ layout: post
 title: "关于手机和云的学术研究"
 date: 2012-09-13 14:00
 comments: true
-categories: Mobile Cloud
+categories: Android System
 ---
 这两天看了两篇关于手机和云结合的文章，两篇的motivation不同，所以所用的方法也就自然不一样了。下面对这两篇进行分别的介绍：
 

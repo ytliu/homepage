@@ -3,7 +3,7 @@ layout: post
 title: "浅谈某些攻击及其防范"
 date: 2012-02-25 21:03
 comments: true
-categories: Security Paper
+categories: Security Paper Attack
 ---
 
 很多时候我觉得攻击和防范的历史就像一部电视连续剧，不断出现的魔高一尺道高一丈，此消彼长，生生不息……

@@ -3,7 +3,7 @@ layout: post
 title: "杂"
 date: 2012-02-19 18:08
 comments: true
-categories: 周计划 杂
+categories: Others
 ---
 
 总的来说这周过得是比较颓废的，花了太多时间在金庸上，晚睡早起的，不过我并不后悔，没有什么好后悔的，做了就是做了，而且过程还挺开心的，好好制定接下来的计划并实行就好了。

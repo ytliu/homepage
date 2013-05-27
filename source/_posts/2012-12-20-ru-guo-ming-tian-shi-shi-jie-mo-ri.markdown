@@ -3,7 +3,7 @@ layout: post
 title: "如果明天是世界末日"
 date: 2012-12-20 21:44
 comments: true
-categories: 生活
+categories: Life
 ---
 
 那我觉得今天过的好没意义啊。

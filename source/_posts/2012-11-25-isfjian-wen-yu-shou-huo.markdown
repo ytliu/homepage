@@ -3,7 +3,7 @@ layout: post
 title: "ISF见闻与收获"
 date: 2012-11-25 13:03
 comments: true
-categories: security
+categories: Security
 ---
 
 11月22-23日两天参加了[ISF2012](http://isf.cisrg.org/ ISF2012)，作为一个刚刚涉入安全领域的我来说实在是收获太多，很有必要进行个比较详细的总结。

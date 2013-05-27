@@ -3,7 +3,7 @@ layout: post
 title: "我的梦想"
 date: 2012-03-26 14:15
 comments: true
-categories: 梦想
+categories: Life
 ---
 
 {% blockquote %}

@@ -3,7 +3,7 @@ layout: post
 title: "Markdown语法测试"
 date: 2011-12-21 15:17
 comments: true
-categories: 杂
+categories: Others
 ---
 
 <http://ytliu.info>

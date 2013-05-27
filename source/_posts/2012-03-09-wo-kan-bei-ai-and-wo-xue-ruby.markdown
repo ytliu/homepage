@@ -3,7 +3,7 @@ layout: post
 title: "我看北爱&amp;我学ruby"
 date: 2012-03-09 21:30
 comments: true
-categories: ruby 人生
+categories: Life Ruby
 ---
 
 **我看北爱**

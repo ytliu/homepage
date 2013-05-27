@@ -3,7 +3,7 @@ layout: post
 title: "全新的开始"
 date: 2012-09-04 9:35
 comments: true
-categories: 生活
+categories: Life
 ---
 
 坐在火车上，静静地想着一个新的生活的开始。
