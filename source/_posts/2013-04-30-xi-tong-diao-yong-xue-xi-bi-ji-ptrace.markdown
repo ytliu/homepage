@@ -4,6 +4,7 @@ title: "系统调用学习笔记 - ptrace和wait"
 date: 2013-04-30 09:46
 comments: true
 categories: Linux
+keywords: ptrace wait
 ---
 
 在系统安全这门课上讲到ptrace这个系统调用，我马上想到当年做CFIMon里面用到的ptrace:
@@ -307,7 +308,7 @@ data.val = ptrace(PTRACE_PEEKDATA, child, addr + i * 4, NULL);
 ptrace(PTRACE_POKEDATA, child, addr + i * 4, data.val);
 {% endcodeblock %}
 
-将反转后的字符串写入寄存器ecx中，从而是的打出来的文件名是反转了的。
+将反转后的字符串写入寄存器ecx中，从而使得打出来的文件名是反转了的。
 
 最后，通过调用
 

@@ -4,6 +4,7 @@ title: "Android的那些事 - CyanogenMod"
 date: 2013-05-04 22:07
 comments: true
 categories: Android
+keywords: cyanogenmod maguro 
 ---
 
 这个系列我想记录一些和Android相关但是和技术无关的东西，这次就从CyanogenMod开始讲起吧。

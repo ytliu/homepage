@@ -290,11 +290,11 @@ include $(BUILD_EXECUTABLE)
 
 打开一个shell：
 
-	$ adb push libs/nfqnltest /data/data/nfqnltest/”
+	$ adb push libs/nfqnltest /data/data/nfqnltest/
 
 转回刚刚那个shell
 
 	# cd /data/data/nfqnltest
- 	# ./nfqnltest
+	# ./nfqnltest
 
 这样整个过程就完成了。

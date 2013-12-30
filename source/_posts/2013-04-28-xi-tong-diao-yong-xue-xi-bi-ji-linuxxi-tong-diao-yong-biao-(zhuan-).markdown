@@ -4,6 +4,7 @@ title: "系统调用学习笔记 - Linux系统调用表（转）"
 date: 2013-04-28 20:56
 comments: true
 categories: Linux
+keywords: syscall
 ---
 
 最近发现自己对Linux里面很多的系统调用都不清楚具体是在怎么回事儿，想要好好学习一下。

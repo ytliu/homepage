@@ -3,7 +3,7 @@ layout: post
 title: "ChinaSys小记（2013.5）"
 date: 2013-05-22 19:25
 comments: true
-categories: System Life
+categories: System Life Conference
 ---
 
 猛然发现好久没有写博客了，一阵罪恶感袭来，都有点不知道这段日子时间都是怎么过去的了，之前赶CCS失败告终，然后一阵混沌，又去北京参加ChinaSys，和实验室去常州春游，回来继续做我们的project...甚至连课都好久没去上了，以至于这周是单周还是双周都不知道了，今天的专业英语做presentation也错过了（不过还好有靠谱的队友，不然就悲剧了）。

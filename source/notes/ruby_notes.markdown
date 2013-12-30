@@ -122,3 +122,241 @@ gsub(pattern) → enumerator
 {% codeblock lang:ruby %}
 "hello".gsub(/./) {|s| s.ord.to_s + ' '}      #=> "104 101 108 108 111 "
 {% endcodeblock %}	
+
+##### Array.uniq & uniq!
+
+* APIs:
+{% codeblock lang:ruby %}
+uniq → new_ary click to toggle source
+uniq { |item| ... } → new_ary
+uniq! → ary or nil click to toggle source
+uniq! { |item| ... } → ary or nil
+{% endcodeblock %}
+* uniq返回的是消除重复后的array，而uniq!返回的值比较不一样，如果有重复的话，则和uniq返回同样的array，如果没有重复，则返回nil
+{% codeblock lang:ruby %}
+a = [ "a", "a", "b", "b", "c" ]
+a.uniq   # => ["a", "b", "c"]
+
+b = [["student","sam"], ["student","george"], ["teacher","matz"]]
+b.uniq { |s| s.first } # => [["student", "sam"], ["teacher", "matz"]]
+
+a = [ "a", "a", "b", "b", "c" ]
+a.uniq!   # => ["a", "b", "c"]
+
+b = [ "a", "b", "c" ]
+b.uniq!   # => nil
+{% endcodeblock %}
+
+##### String.chomp & chop & strip
+
+* APIs
+{% codeblock lang:ruby %}
+chomp(separator=$/) → new_str
+chop → new_str
+strip → new_str
+{% endcodeblock %}
+
+其中，如果没有定义`$/`的话，**chomp**是把如`\r`、`\n`、`\r\n`等去除，**chop**就是去除最后一个字母，**strip**是把前后的空格都去掉，还有相关的**lstrip**和**rstrip**
+
+* Examples
+{% codeblock lang:ruby %}
+"hello".chomp            #=> "hello"
+"hello\n".chomp          #=> "hello"
+"hello\r\n".chomp        #=> "hello"
+"hello\n\r".chomp        #=> "hello\n"
+"hello\r".chomp          #=> "hello"
+"hello \n there".chomp   #=> "hello \n there"
+"hello".chomp("llo")     #=> "he"
+
+"string\r\n".chop   #=> "string"
+"string\n\r".chop   #=> "string\n"
+"string\n".chop     #=> "string"
+"string".chop       #=> "strin"
+"x".chop.chop       #=> ""
+
+"    hello    ".strip   #=> "hello"
+"\tgoodbye\r\n".strip   #=> "goodbye"
+{% endcodeblock %}
+------
+
+#### 关于语法和语句
+
+* 在一个循环中有6种方法可以打断当前正在执行的语句：break，next，redo，return，retry，throw/catch
+
+* rescue with Method, Class and Module definition:
+
+{% codeblock lang:ruby %}
+def method_name(x)
+# The body of the method goes here.
+# Usually, the method body runs to completion without exceptions # and returns to its caller normally.
+rescue
+# Exception-handling code goes here.
+# If an exception is raised within the body of the method, or if # one of the methods it calls raises an exception, then control # jumps to this block.
+else
+# If no exceptions occur in the body of the method # then the code in this clause is executed.
+ensure
+# The code in this clause is executed no matter what happens in the
+# body of the method. It is run if the method runs to completion, if
+# it throws an exception, or if it executes a return statement.
+end
+{% endcodeblock %}
+
+##### 关于method
+
+Ruby是一个纯OO的语言，定义的所有的方法都是属于某个类的。对于如下的场景，我们在整个文件的最上方定义一个function，包含在所有定义的class之外：
+{% codeblock lang:ruby %}
+def square(n)
+	n * n
+end
+{% endcodeblock %}	
+似乎这个就是一个传统意义上的function，并不像我们所说的method属于哪一个类，但是其实在ruby的实现中，这个function其实会被定义为类Object的一个private method，也就是说我们可以在任何一个Object类的子类中调用这个方法，但是不能在某个对象上调用它，因为它只属于这个类的私有方法：
+{% codeblock lang:ruby %}
+class Foo
+    def fourth_power_of(x)
+      square(x) * square(x)
+    end
+end
+{% endcodeblock %}	
+
+	ruby> "fish".square(5)
+	ERR: (eval):1: private method `square' called for "fish":String
+
+###### Singleton Method
+
+对一个单独的对象定义的方法叫做单例方法：
+
+	ruby> class SingletonTest
+	    |   def size
+	    |     25
+	    |   end
+	    | end
+	   nil
+	ruby> test1 = SingletonTest.new
+	   #<SingletonTest:0xbc468>
+	ruby> test2 = SingletonTest.new
+	   #<SingletonTest:0xbae20>
+	ruby> def test2.size
+	    |    10
+	    | end
+	   nil
+	ruby> test1.size
+	   25
+	ruby> test2.size
+	   10
+
+##### 关于module
+
+* module和class的区别：
+
+	module没有实例
+	module没有子类
+	module由`module ... end`括起来
+
+##### 关于procedure object
+
+* trap - 为系统信号定义handler：
+
+	ruby> inthandler = proc{ puts "ctrl-C was pressed." }
+	ruby> trap "SIGINT", inthandler
+
+另外，对于`trap`来说，可以更简略地定义这个handler：
+
+	ruby> trap "SIGINT", proc{ puts "^C was pressed." }
+
+甚至：
+
+	ruby> trap "SIGINT", 'puts "^C was pressed."'
+
+##### 关于variable
+
+###### 4种variable
+
+* @开头的是instance variable
+* @@开头的是class variable
+* $开头的是global variable
+* 小写字母或者`_`开头的是local variable
+
+###### trace_var
+
+可以对某个变量进行trace，在它发送改变的时候进行一些操作：
+
+	ruby> trace_var :$x, proc{puts "$x is now #{$x}"}
+	   nil
+	ruby> $x = 5
+	$x is now 5
+	   5
+
+###### $开头的变量
+
+Variable   		| Description
+:-----------: 	| :-----------
+$!		  		| latest error message
+$@	      		| location of error 
+$_	 			| string last read by gets
+$.	 			| line number last read by interpreter
+$&	 			| string last matched by regexp
+$~	 			| the last regexp match, as an array of subexpressions
+$n	 			| the nth subexpression in the last match (same as $~[n])
+$=	 			| case-insensitivity flag
+$/	 			| input record separator
+$\	 			| output record separator
+$0	 			| the name of the ruby script file
+$*	 			| the command line arguments
+$$	 			| interpreter's process ID
+$?	 			| exit status of last executed child process
+
+其中`$_`和`$~`是局部变量
+
+###### 跨文件访问变量的方法
+
+有两种：
+
+* 通过$var
+* 通过class的静态变量@@var，然后在class中采用静态方法对@@var进行赋值和取值
+
+
+------
+
+#### 特定类或模块笔记
+
+##### Logger
+* Logger初始化 (If your log is being stored in a file, you can have Logger rotate or replace the log file when it gets too big, or once a certain amount of time has elapsed)
+{% codeblock lang:ruby %}
+require 'logger'
+# Keep data for the current month only
+Logger.new('this_month.log', 'monthly')
+# Keep data for today and the past 20 days.
+Logger.new('application.log', 20, 'daily')
+# Start the log over whenever the log exceeds 100 megabytes in size.
+Logger.new('application.log', 0, 100 * 1024 * 1024)
+{% endcodeblock %}	
+* Logger的级别有以下五种：Logger.debug, Logger.info, Logger.warn, Logger.error, Logger.fatal，可以通过修改level来修改Logger的级别，只有在`>=`当前Logger级别的log才会被记录下来：
+{% codeblock lang:ruby %}
+$LOG.level = Logger::ERROR
+{% endcodeblock %}
+
+使用Logger：
+{% codeblock lang:ruby %}
+$LOG.debug("Some log")
+{% endcodeblock %}
+
+##### Time
+{% codeblock lang:ruby %}
+t = Time.now
+# to get day, month and year with century  
+# also hour, minute and second  
+puts t.strftime("%d/%m/%Y %H:%M:%S")
+  
+# You can use the upper case A and B to get the full  
+# name of the weekday and month, respectively  
+puts t.strftime("%A")
+puts t.strftime("%B")
+  
+# You can use the lower case a and b to get the abbreviated  
+# name of the weekday and month, respectively  
+puts t.strftime("%a")
+puts t.strftime("%b")
+  
+# 24 hour clock and Time zone name  
+puts t.strftime("at %H:%M %Z")
+{% endcodeblock %}
