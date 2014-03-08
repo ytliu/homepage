@@ -295,7 +295,7 @@ $@	      		| location of error
 $_	 			| string last read by gets
 $.	 			| line number last read by interpreter
 $&	 			| string last matched by regexp
-$~	 			| the last regexp match, as an array of subexpressions
+$~	 			| the last regexp match, as an array of subexpressionsmark
 $n	 			| the nth subexpression in the last match (same as $~[n])
 $=	 			| case-insensitivity flag
 $/	 			| input record separator

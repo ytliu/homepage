@@ -489,4 +489,8 @@ cpuset表示可以运行在1，2，4，6物理CPU上，current表示启动客户
 </domain>
 {% endcodeblock %}
 
+* disk的配置
+
+* network的配置
+
 ------
