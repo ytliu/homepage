@@ -1,0 +1,1131 @@
+diff --git a/_config.yml b/_config.yml
+index cc5206e..d1f11fe 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -121,3 +121,5 @@ weibo_fansline: 0   # 粉丝显示多少行
+ weibo_show: false   # 是否显示最近微博内容
+ weibo_pic: false    # 是否显示微博中的图片
+ weibo_skin: 1       # 使用哪种配色风格，数字为从1开始的微博秀风格序号
++
++share: true
+diff --git a/blog.sublime-workspace b/blog.sublime-workspace
+index f90c04f..ddd657f 100644
+--- a/blog.sublime-workspace
++++ b/blog.sublime-workspace
+@@ -4,6 +4,10 @@
+ 		"selected_items":
+ 		[
+ 			[
++				"submi_",
++				"submit_login"
++			],
++			[
+ 				"class",
+ 				"className"
+ 			]
+@@ -11,14 +15,86 @@
+ 	},
+ 	"buffers":
+ 	[
++		{
++			"file": "source/life/book.markdown",
++			"settings":
++			{
++				"buffer_size": 1158,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/paper/index.markdown",
++			"settings":
++			{
++				"buffer_size": 1359,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/life/movie.markdown",
++			"settings":
++			{
++				"buffer_size": 1198,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/notes/kvm_notes.markdown",
++			"settings":
++			{
++				"buffer_size": 11137,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/notes/index.markdown",
++			"settings":
++			{
++				"buffer_size": 622,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/notes/book_notes.markdown",
++			"settings":
++			{
++				"buffer_size": 165,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/notes/arm_notes.markdown",
++			"settings":
++			{
++				"buffer_size": 1875,
++				"line_ending": "Unix"
++			}
++		},
++		{
++			"file": "source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
++			"settings":
++			{
++				"buffer_size": 1173,
++				"line_ending": "Unix"
++			}
++		}
+ 	],
+ 	"build_system": "",
+ 	"command_palette":
+ 	{
+-		"height": 392.0,
++		"height": 347.0,
+ 		"selected_items":
+ 		[
+ 			[
++				"package",
++				"Package Control: Install Package"
++			],
++			[
++				"synru",
++				"Set Syntax: Ruby"
++			],
++			[
+ 				"install",
+ 				"Package Control: Install Package"
+ 			],
+@@ -51,7 +127,7 @@
+ 				"Set Syntax: Java"
+ 			]
+ 		],
+-		"width": 575.0
++		"width": 593.0
+ 	},
+ 	"console":
+ 	{
+@@ -68,54 +144,111 @@
+ 	},
+ 	"file_history":
+ 	[
++		"/Users/luisleo/blog/octopress/source/_posts/2014-01-19-wo-de-2013.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-ptrace.markdown",
++		"/Users/luisleo/blog/octopress/source/notes/ruby_notes.markdown",
++		"/Users/luisleo/blog/octopress/source/_layouts/default.html",
++		"/Users/luisleo/blog/octopress/source/_includes/asides/link.html",
++		"/Users/luisleo/blog/octopress/source/404.markdown",
++		"/Users/luisleo/blog/octopress/source/_layouts/page.html",
++		"/Users/luisleo/blog/octopress/source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-04-01-notes-about-ruby.markdown",
++		"/Users/luisleo/blog/octopress/Rakefile",
++		"/Users/luisleo/blog/octopress/source/notes/books/game.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-12-13-mei-guo-qian-zheng-mian-qian-xiao-ji.markdown",
+ 		"/Users/luisleo/blog/octopress/source/index.html",
++		"/Users/luisleo/blog/octopress/source/_posts/2011-12-26-paper-reading-tcp-re-and-incremental-mr.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-12-16-fingerprintsuan-fa-cha-chao-xi.markdown",
++		"/Users/luisleo/Test/ruby/csp",
++		"/Users/luisleo/IPADS/project/kvm/kvmcon/daemon.py",
++		"/Users/luisleo/blog/octopress/source/notes/linux_notes.markdown",
++		"/Users/luisleo/id_rsa.pub",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-11-24-11yue-sui-bi.markdown",
++		"/Users/luisleo/IPADS/project/kvm/kvmcon/kvmcond-M.py",
++		"/Users/luisleo/blog/octopress/source/life/drama.markdown",
++		"/Users/luisleo/blog/octopress/public/life/movie.html",
++		"/Users/luisleo/blog/octopress/source/life/movie.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/raid2007jiang.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/raid2008wang.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/sacmat2007xu.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/srds2011gu.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/dsn2013wu.markdown",
++		"/Users/luisleo/blog/octopress/tr2013dall.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/isca2010keller.markdown",
++		"/Users/luisleo/blog/octopress/ccs2011szefer.markdown",
++		"/Users/luisleo/blog/octopress/source/paper/acmat2007xu.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-10-20-clkxiao-ji-(2013-dot-10).markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-10-19-chinasysxiao-ji-(2013-dot-10).markdown",
++		"/Users/luisleo/IPADS/project/tx-vmi/rebuttal",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-05-22-chinasysxiao-ji.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-08-03-what-makes-a-good-systems-paper-by-gernot-heiser-in-apsys-2013.markdown",
++		"/Users/luisleo/blog/octopress/.rbenv-version",
++		"/Users/luisleo/diff",
++		"/Users/luisleo/blog/octopress/source/life/book.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-04-28-xi-tong-diao-yong-xue-xi-bi-ji-linuxxi-tong-diao-yong-biao-(zhuan-).markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-09-11-fork-in-multi-threaded-program.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-05-04-androidde-na-xie-shi-cyanogenmod.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-09-28-ttyde-na-xie-shi-er.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-10-04-netfilterxue-xi-bi-ji-(si-).markdown",
++		"/Users/luisleo/blog/octopress/_config.yml",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-09-12-share-mouse-and-keyboard-using-synergy.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-04-09-netfilterxue-xi-bi-ji-(san-).markdown",
++		"/Users/luisleo/Test/c/thread_example.c",
++		"/Users/luisleo/IPADS/project/RTM4VMI/project/libvmi/examples/process-list.c",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-08-04-libvmi-setup.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-08-14-write-introspection-tools-using-libvmi.markdown",
++		"/Users/luisleo/Downloads/id_rsa.pub",
++		"/Users/luisleo/id_rsa",
++		"/Users/luisleo/Downloads/print_sys_call_table.c",
++		"/Users/luisleo/Downloads/sourses.list",
++		"/Users/luisleo/blog/octopress/source/_notes/2013-08-05-linux-xiao-ji-qiao.markdown",
++		"/Users/luisleo/blog/octopress/source/_notes/2013-05-26-rubyxue-xi-bi-ji.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-10-05-android-service-startup.markdown",
++		"/Users/luisleo/Test/web/6.858-lab5/answer-2.html",
++		"/Users/luisleo/Test/web/6.858-lab5/answer-3.html",
++		"/Users/luisleo/Test/web/6.858-lab5/answer-2-iframe.html",
++		"/Users/luisleo/IPADS/project/Cloudroid/figure/capacity-origin",
++		"/Users/luisleo/IPADS/project/Cloudroid/figure/power.data",
++		"/Users/luisleo/IPADS/project/Cloudroid/capacity-rose",
++		"/Users/luisleo/Test/ruby/testhash.ruby",
++		"/Users/luisleo/blog/octopress/source/_posts/2011-12-21-kai-pian-yi-shi.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-02-19-za.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-11-25-isfjian-wen-yu-shou-huo.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-03-17-exploitation-learning-outset.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-02-25-qian-tan-mou-xie-gong-ji-ji-qi-fang-fan.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-09-13-guan-yu-shou-ji-he-yun-de-xue-zhu-yan-jiu.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-03-09-wo-kan-bei-ai-and-wo-xue-ruby.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-03-26-wo-de-meng-xiang.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-03-03-wei-lai-zai-na-li.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-02-12-wo-yao-ti-gao-zhi-xing-li-!.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-09-02-quan-xin-de-kai-shi.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2012-12-20-ru-guo-ming-tian-shi-shi-jie-mo-ri.markdown",
++		"/Users/luisleo/blog/octopress/source/_posts/2013-01-12-qiao-bang-zhu-chuan-you-gan.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-01-connect-smartphone-to-android-emulator.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-08-get-root-in-my-android.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-09-aslr-in-android.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-15-dynamic-linker.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-12-20-ru-guo-ming-tian-shi-shi-jie-mo-ri.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-30-qemu-study-for-android-emulator.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-01-06-base64bian-ma.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-01-12-qiao-bang-zhu-chuan-you-gan.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-02-17-[(zhuan-)]-ji-suan-ji-de-qi-dong.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-01-dr-android-and-mr-hide-xidashiyin-fa-de-gu-shi.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-10-redexer-and-ocaml.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-24-cross-reference-graph-of-android-component.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-29-netfilterxue-xi-bi-ji-(er-).markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-29-netfilterxue-xi-bi-ji-(yi-).markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-04-09-netfilterxue-xi-bi-ji-(san-).markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2013-04-14-tong-bu-yuan-yu-xue-xi-bi-ji-lock,rcuhe-transaction.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-04-28-xi-tong-diao-yong-xue-xi-bi-ji-linuxxi-tong-diao-yong-biao-(zhuan-).markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-ptrace.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-05-04-androidde-na-xie-shi-cyanogenmod.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-05-22-chinasysxiao-ji.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-10-20-regain-my-vms-account.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-10-27-goagent-setup-note.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-11-03-parcel-object-in-android.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-11-11-getsystemservice-in-android.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-11-12-android-partition-explaination.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-11-25-isfjian-wen-yu-shou-huo.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-02-25-qian-tan-mou-xie-gong-ji-ji-qi-fang-fan.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-03-03-wei-lai-zai-na-li.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-03-09-wo-kan-bei-ai-and-wo-xue-ruby.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-03-17-exploitation-learning-outset.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-03-26-wo-de-meng-xiang.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-04-01-notes-about-ruby.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-09-02-quan-xin-de-kai-shi.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-09-13-guan-yu-shou-ji-he-yun-de-xue-zhu-yan-jiu.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-09-16-progit-reading-1.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-09-21-progit-reading-2.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-09-28-opennebula-setup-note.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-10-05-android-service-startup.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-10-12-android-messaging-mechanism.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-02-12-wo-yao-ti-gao-zhi-xing-li-!.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2012-01-03-paper-reading-x86-interrupt-and-sr-iov-interrupts-avoidance.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2011-12-26-paper-reading-tcp-re-and-incremental-mr.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
+ 		"/Users/luisleo/blog/octopress/source/_posts/2011-12-23-paper-reading-mobile-security-survey-and-ds-failure-detection.markdown",
+-		"/Users/luisleo/blog/octopress/_config.yml",
+ 		"/Users/luisleo/blog/octopress/config.rb",
+-		"/Users/luisleo/blog/octopress/Rakefile",
+ 		"/Users/luisleo/blog/octopress/source/_includes/asides/about.html",
+ 		"/Users/luisleo/blog/octopress/source/notes/index.markdown",
+ 		"/Users/luisleo/blog/octopress/sass/custom/_styles.scss",
+@@ -138,43 +271,7 @@
+ 		"/Users/luisleo/blog/octopress/source/_includes/article.html",
+ 		"/Users/luisleo/blog/octopress/source/_includes/navigation.html",
+ 		"/Users/luisleo/blog/octopress/source/stylesheets/screen.css",
+-		"/Users/luisleo/blog/octopress/source/stylesheets/screen-ori.css",
+-		"/Users/luisleo/blog/octopress/stylesheets/screen.css",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-04-28-xi-tong-diao-yong-xue-xi-bi-ji-([?]-)-linuxxi-tong-diao-yong-biao-(zhuan-).markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2012-02-19-za.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-([?]-)-linuxxi-tong-diao-yong-biao-(zhuan-).markdown",
+-		"/Users/luisleo/blog/octopress/_deploy/blog/2013/04/30/xi-tong-diao-yong-xue-xi-bi-ji-([?]-)-linuxxi-tong-diao-yong-biao-(zhuan-)/index.html",
+-		"/Users/luisleo/Documents/SJTU/Courses/软件程序理论/1120379027.hs",
+-		"/Users/luisleo/granter.py",
+-		"/Users/luisleo/hello-user.py",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-03-29-netfilterxue-xi-bi-ji.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-03-10-redexer-and-ocaml-and-functional-language.markdown",
+-		"/Users/luisleo/blog/octopress/source/_posts/2013-02-23-ruby-substring-performance.markdown",
+-		"/Users/luisleo/id_rsa.pub",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/paper/todo",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/paper/abstract.tex",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/Common.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/SessionThread.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/Server.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/ServerService.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/XML.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/BufferedBracketReader.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/Session.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/Shell.java",
+-		"/Users/luisleo/Programs/android/tool/mercury/src/mercury/server/src/com/mwr/mercury/Main.java",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/android-frameworks-base/core/java/android/app/Activity.java",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService/src/com/proxy/RemoteProxyService.java",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService/project.properties",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService.sublime-project",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService/tags",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService/src/com/proxy/LocalProxyService.java",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/CTags/Default.sublime-keymap",
+-		"/Users/luisleo/Documents/IPADS/project/remote-binder/project/RemoteProxyService/src/com/server/IRemoteProxyService.java",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+-		"/Users/luisleo/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap"
++		"/Users/luisleo/blog/octopress/source/stylesheets/screen-ori.css"
+ 	],
+ 	"find":
+ 	{
+@@ -192,6 +289,11 @@
+ 		"case_sensitive": false,
+ 		"find_history":
+ 		[
++			"game",
++			"蒋德钧",
++			"1",
++			"codeblock",
++			"initPos",
+ 			"rsync_delete",
+ 			"font-size:2.2",
+ 			"chmod",
+@@ -228,8 +330,220 @@
+ 	"groups":
+ 	[
+ 		{
++			"selected": 0,
+ 			"sheets":
+ 			[
++				{
++					"buffer": 0,
++					"file": "source/life/book.markdown",
++					"settings":
++					{
++						"buffer_size": 1158,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								123,
++								123
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 1,
++					"file": "source/paper/index.markdown",
++					"settings":
++					{
++						"buffer_size": 1359,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								1220,
++								1358
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 2,
++					"file": "source/life/movie.markdown",
++					"settings":
++					{
++						"buffer_size": 1198,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								1139,
++								1139
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 3,
++					"file": "source/notes/kvm_notes.markdown",
++					"settings":
++					{
++						"buffer_size": 11137,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								10042,
++								10042
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage",
++							"translate_tabs_to_spaces": false
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 4,
++					"file": "source/notes/index.markdown",
++					"settings":
++					{
++						"buffer_size": 622,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								0,
++								0
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 5,
++					"file": "source/notes/book_notes.markdown",
++					"settings":
++					{
++						"buffer_size": 165,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								165,
++								165
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 6,
++					"file": "source/notes/arm_notes.markdown",
++					"settings":
++					{
++						"buffer_size": 1875,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								1161,
++								1161
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage"
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				},
++				{
++					"buffer": 7,
++					"file": "source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
++					"settings":
++					{
++						"buffer_size": 1173,
++						"regions":
++						{
++						},
++						"selection":
++						[
++							[
++								359,
++								310
++							]
++						],
++						"settings":
++						{
++							"syntax": "Packages/Markdown/Markdown.tmLanguage",
++							"tab_size": 8,
++							"translate_tabs_to_spaces": true
++						},
++						"translation.x": 0.0,
++						"translation.y": 0.0,
++						"zoom_level": 1.0
++					},
++					"type": "text"
++				}
+ 			]
+ 		}
+ 	],
+@@ -268,6 +582,10 @@
+ 	{
+ 		"height": 100.0
+ 	},
++	"output.exec":
++	{
++		"height": 112.0
++	},
+ 	"replace":
+ 	{
+ 		"height": 0.0
+@@ -279,6 +597,262 @@
+ 		"selected_items":
+ 		[
+ 			[
++				"wo-de",
++				"source/_posts/2014-01-19-wo-de-2013.markdown"
++			],
++			[
++				"yu-fa",
++				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
++			],
++			[
++				"xi-tong",
++				"source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-ptrace.markdown"
++			],
++			[
++				"arm_",
++				"source/notes/arm_notes.markdown"
++			],
++			[
++				"link",
++				"source/_includes/asides/link.html"
++			],
++			[
++				"default",
++				"source/_layouts/default.html"
++			],
++			[
++				"page",
++				"source/_layouts/page.html"
++			],
++			[
++				"ptrace",
++				"source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-ptrace.markdown"
++			],
++			[
++				"markdown",
++				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
++			],
++			[
++				"ruby.n",
++				"source/notes/ruby_notes.markdown"
++			],
++			[
++				"ruby.",
++				"source/_posts/2012-04-01-notes-about-ruby.markdown"
++			],
++			[
++				"mian",
++				"source/_posts/2013-12-13-mei-guo-qian-zheng-mian-qian-xiao-ji.markdown"
++			],
++			[
++				"finger",
++				"source/_posts/2013-12-16-fingerprintsuan-fa-cha-chao-xi.markdown"
++			],
++			[
++				"game",
++				"source/notes/books/game.markdown"
++			],
++			[
++				"book_nots",
++				"source/notes/book_notes.markdown"
++			],
++			[
++				"sui",
++				"source/_posts/2013-11-24-11yue-sui-bi.markdown"
++			],
++			[
++				"kvm",
++				"source/notes/kvm_notes.markdown"
++			],
++			[
++				"dra",
++				"source/life/drama.markdown"
++			],
++			[
++				"movi",
++				"source/life/movie.markdown"
++			],
++			[
++				"movie",
++				"public/life/movie.html"
++			],
++			[
++				"tr20",
++				"tr2013dall.markdown"
++			],
++			[
++				"ccs",
++				"ccs2011szefer.markdown"
++			],
++			[
++				"clk",
++				"source/_posts/2013-10-20-clkxiao-ji-(2013-dot-10).markdown"
++			],
++			[
++				"go",
++				"source/_posts/2013-08-03-what-makes-a-good-systems-paper-by-gernot-heiser-in-apsys-2013.markdown"
++			],
++			[
++				"chin",
++				"source/_posts/2013-05-22-chinasysxiao-ji.markdown"
++			],
++			[
++				"",
++				".rbenv-version"
++			],
++			[
++				"srds",
++				"source/paper/srds2011gu.markdown"
++			],
++			[
++				"book",
++				"source/life/book.markdown"
++			],
++			[
++				"netfil",
++				"source/_posts/2013-10-04-netfilterxue-xi-bi-ji-(si-).markdown"
++			],
++			[
++				"_con",
++				"_config.yml"
++			],
++			[
++				"xitong",
++				"source/_posts/2013-04-28-xi-tong-diao-yong-xue-xi-bi-ji-linuxxi-tong-diao-yong-biao-(zhuan-).markdown"
++			],
++			[
++				"ttyde",
++				"source/_posts/2013-09-28-ttyde-na-xie-shi-er.markdown"
++			],
++			[
++				"share-",
++				"source/_posts/2013-09-12-share-mouse-and-keyboard-using-synergy.markdown"
++			],
++			[
++				"markd",
++				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
++			],
++			[
++				"fork",
++				"source/_posts/2013-09-11-fork-in-multi-threaded-program.markdown"
++			],
++			[
++				"linu",
++				"source/notes/linux_notes.markdown"
++			],
++			[
++				"write",
++				"source/_posts/2013-08-14-write-introspection-tools-using-libvmi.markdown"
++			],
++			[
++				"linux",
++				"source/notes/linux_notes.markdown"
++			],
++			[
++				"rubyx",
++				"source/_notes/2013-05-26-rubyxue-xi-bi-ji.markdown"
++			],
++			[
++				"linux-xiao",
++				"source/_notes/2013-08-05-linux-xiao-ji-qiao.markdown"
++			],
++			[
++				"libvm",
++				"source/_posts/2013-08-04-libvmi-setup.markdown"
++			],
++			[
++				"android",
++				"source/_posts/2013-05-04-androidde-na-xie-shi-cyanogenmod.markdown"
++			],
++			[
++				"andr",
++				"source/_posts/2012-10-05-android-service-startup.markdown"
++			],
++			[
++				"mark",
++				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
++			],
++			[
++				"what-",
++				"source/_posts/2013-08-03-what-makes-a-good-systems-paper-by-gernot-heiser-in-apsys-2013.markdown"
++			],
++			[
++				"ruby_",
++				"source/notes/ruby_notes.markdown"
++			],
++			[
++				"ind",
++				"source/index.html"
++			],
++			[
++				"kai-",
++				"source/_posts/2011-12-21-kai-pian-yi-shi.markdown"
++			],
++			[
++				"za",
++				"source/_posts/2012-02-19-za.markdown"
++			],
++			[
++				"leani",
++				"source/_posts/2012-03-17-exploitation-learning-outset.markdown"
++			],
++			[
++				"isf",
++				"source/_posts/2012-11-25-isfjian-wen-yu-shou-huo.markdown"
++			],
++			[
++				"qian",
++				"source/_posts/2012-02-25-qian-tan-mou-xie-gong-ji-ji-qi-fang-fan.markdown"
++			],
++			[
++				"guan",
++				"source/_posts/2012-09-13-guan-yu-shou-ji-he-yun-de-xue-zhu-yan-jiu.markdown"
++			],
++			[
++				"gongji",
++				"source/_posts/2012-02-25-qian-tan-mou-xie-gong-ji-ji-qi-fang-fan.markdown"
++			],
++			[
++				"wo-k",
++				"source/_posts/2012-03-09-wo-kan-bei-ai-and-wo-xue-ruby.markdown"
++			],
++			[
++				"wo-d",
++				"source/_posts/2012-03-26-wo-de-meng-xiang.markdown"
++			],
++			[
++				"wo-y",
++				"source/_posts/2012-02-12-wo-yao-ti-gao-zhi-xing-li-!.markdown"
++			],
++			[
++				"wei-",
++				"source/_posts/2012-03-03-wei-lai-zai-na-li.markdown"
++			],
++			[
++				"quan-",
++				"source/_posts/2012-09-02-quan-xin-de-kai-shi.markdown"
++			],
++			[
++				"ru-g",
++				"source/_posts/2012-12-20-ru-guo-ming-tian-shi-shi-jie-mo-ri.markdown"
++			],
++			[
++				"china",
++				"source/_posts/2013-05-22-chinasysxiao-ji.markdown"
++			],
++			[
++				"qiao",
++				"source/_posts/2013-01-12-qiao-bang-zhu-chuan-you-gan.markdown"
++			],
++			[
++				"_",
++				"_config.yml"
++			],
++			[
++				"ruby_note",
++				"source/notes/ruby_notes.markdown"
++			],
++			[
+ 				"index",
+ 				"source/index.html"
+ 			],
+@@ -291,10 +865,6 @@
+ 				"config.rb"
+ 			],
+ 			[
+-				"_con",
+-				"_config.yml"
+-			],
+-			[
+ 				"style",
+ 				"sass/custom/_styles.scss"
+ 			],
+@@ -327,18 +897,10 @@
+ 				"source/_includes/custom/head.html"
+ 			],
+ 			[
+-				"mark",
+-				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
+-			],
+-			[
+ 				"chinas",
+ 				"source/_posts/2013-05-22-chinasysxiao-ji.markdown"
+ 			],
+ 			[
+-				"ptrace",
+-				"source/_posts/2013-02-23-traceview-in-android.markdown"
+-			],
+-			[
+ 				"cyano",
+ 				"source/_posts/2013-05-04-androidde-na-xie-shi-cyanogenmod.markdown"
+ 			],
+@@ -447,18 +1009,10 @@
+ 				"source/_posts/2013-04-09-netfilterxue-xi-bi-ji-(san-).markdown"
+ 			],
+ 			[
+-				"markd",
+-				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
+-			],
+-			[
+ 				"root",
+ 				"source/_posts/2012-12-08-get-root-in-my-android.markdown"
+ 			],
+ 			[
+-				"markdown",
+-				"source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown"
+-			],
+-			[
+ 				"xue-xi",
+ 				"source/_posts/2013-03-29-netfilterxue-xi-bi-ji-(er-).markdown"
+ 			],
+@@ -483,10 +1037,6 @@
+ 				"source/_posts/2013-02-23-traceview-in-android.markdown"
+ 			],
+ 			[
+-				"za",
+-				"source/_posts/2012-02-19-za.markdown"
+-			],
+-			[
+ 				"trac",
+ 				"source/_posts/2013-02-23-traceview-in-android.markdown"
+ 			],
+@@ -557,34 +1107,6 @@
+ 			[
+ 				"servers",
+ 				"server/src/com/mwr/mercury/ServerService.java"
+-			],
+-			[
+-				"main",
+-				"server/src/com/mwr/mercury/Main.java"
+-			],
+-			[
+-				"sessiont",
+-				"server/src/com/mwr/mercury/SessionThread.java"
+-			],
+-			[
+-				"sessionthre",
+-				"mercury/server/src/com/mwr/mercury/SessionThread.java"
+-			],
+-			[
+-				"",
+-				"project.properties"
+-			],
+-			[
+-				"remoteproxyservice.ja",
+-				"src/com/proxy/RemoteProxyService.java"
+-			],
+-			[
+-				"local",
+-				"src/com/proxy/LocalProxyService.java"
+-			],
+-			[
+-				"remote",
+-				"src/com/server/IRemoteProxyService.java"
+ 			]
+ 		],
+ 		"width": 0.0
+@@ -594,6 +1116,10 @@
+ 		"height": 500.0,
+ 		"selected_items":
+ 		[
++			[
++				"",
++				"/Users/luisleo/Test/ruby/algorithm/algorithm.sublime-project"
++			]
+ 		],
+ 		"width": 380.0
+ 	},
+diff --git a/source/_includes/asides/categories_sidebar.html b/source/_includes/asides/categories_sidebar.html
+index ee5d97b..7672679 100644
+--- a/source/_includes/asides/categories_sidebar.html
++++ b/source/_includes/asides/categories_sidebar.html
+@@ -5,9 +5,9 @@
+   <li><a href='/blog/categories/algorithm'>Algorithm (1)</a></li>
+   <li><a href='/blog/categories/android'>Android (16)</a></li>
+   <li><a href='/blog/categories/attack'>Attack (2)</a></li>
+-  <li><a href='/blog/categories/conference'>Conference (4)</a></li>
++  <li><a href='/blog/categories/conference'>Conference (5)</a></li>
+   <li><a href='/blog/categories/git'>Git (2)</a></li>
+-  <li><a href='/blog/categories/life'>Life (11)</a></li>
++  <li><a href='/blog/categories/life'>Life (13)</a></li>
+   <li><a href='/blog/categories/linux'>Linux (7)</a></li>
+   <li><a href='/blog/categories/network'>Network (4)</a></li>
+   <li><a href='/blog/categories/ocaml'>Ocaml (1)</a></li>
+diff --git a/source/_includes/asides/categories_tag.html b/source/_includes/asides/categories_tag.html
+index 79e80a1..f81a4b1 100644
+--- a/source/_includes/asides/categories_tag.html
++++ b/source/_includes/asides/categories_tag.html
+@@ -1,6 +1,6 @@
+ {% if site.category_tag_cloud %}
+ <section>
+ <h1>Categories</h1>
+-<span class='categories_tag'> <a href='/blog/categories/algorithm' style='font-size: 103.75%'>Algorithm(1)</a>  <a href='/blog/categories/android' style='font-size: 160.0%'>Android(16)</a>  <a href='/blog/categories/attack' style='font-size: 107.5%'>Attack(2)</a>  <a href='/blog/categories/conference' style='font-size: 115.0%'>Conference(4)</a>  <a href='/blog/categories/git' style='font-size: 107.5%'>Git(2)</a>  <a href='/blog/categories/life' style='font-size: 141.25%'>Life(11)</a>  <a href='/blog/categories/linux' style='font-size: 126.25%'>Linux(7)</a>  <a href='/blog/categories/network' style='font-size: 115.0%'>Network(4)</a>  <a href='/blog/categories/ocaml' style='font-size: 103.75%'>Ocaml(1)</a>  <a href='/blog/categories/opennebula' style='font-size: 103.75%'>Opennebula(1)</a>  <a href='/blog/categories/others' style='font-size: 111.25%'>Others(3)</a>  <a href='/blog/categories/paper' style='font-size: 115.0%'>Paper(4)</a>  <a href='/blog/categories/qemu' style='font-size: 103.75%'>Qemu(1)</a>  <a href='/blog/categories/ruby' style='font-size: 107.5%'>Ruby(2)</a>  <a href='/blog/categories/security' style='font-size: 126.25%'>Security(7)</a>  <a href='/blog/categories/system' style='font-size: 126.25%'>System(7)</a>  <a href='/blog/categories/tool' style='font-size: 111.25%'>Tool(3)</a> </span>
++<span class='categories_tag'> <a href='/blog/categories/algorithm' style='font-size: 103.75%'>Algorithm(1)</a>  <a href='/blog/categories/android' style='font-size: 160.0%'>Android(16)</a>  <a href='/blog/categories/attack' style='font-size: 107.5%'>Attack(2)</a>  <a href='/blog/categories/conference' style='font-size: 118.75%'>Conference(5)</a>  <a href='/blog/categories/git' style='font-size: 107.5%'>Git(2)</a>  <a href='/blog/categories/life' style='font-size: 148.75%'>Life(13)</a>  <a href='/blog/categories/linux' style='font-size: 126.25%'>Linux(7)</a>  <a href='/blog/categories/network' style='font-size: 115.0%'>Network(4)</a>  <a href='/blog/categories/ocaml' style='font-size: 103.75%'>Ocaml(1)</a>  <a href='/blog/categories/opennebula' style='font-size: 103.75%'>Opennebula(1)</a>  <a href='/blog/categories/others' style='font-size: 111.25%'>Others(3)</a>  <a href='/blog/categories/paper' style='font-size: 115.0%'>Paper(4)</a>  <a href='/blog/categories/qemu' style='font-size: 103.75%'>Qemu(1)</a>  <a href='/blog/categories/ruby' style='font-size: 107.5%'>Ruby(2)</a>  <a href='/blog/categories/security' style='font-size: 126.25%'>Security(7)</a>  <a href='/blog/categories/system' style='font-size: 126.25%'>System(7)</a>  <a href='/blog/categories/tool' style='font-size: 111.25%'>Tool(3)</a> </span>
+ </section>
+ {% endif %}
+diff --git a/source/_includes/asides/link.html b/source/_includes/asides/link.html
+index 6019d07..ff12f26 100644
+--- a/source/_includes/asides/link.html
++++ b/source/_includes/asides/link.html
+@@ -14,6 +14,12 @@
+         <a href="http://insight-labs.org/wiki/index.php">Insight-labs Wiki</a>
+       </li>
+       <li class="post">
++        <a href="http://hanjc.me">HAN</a>
++      </li>
++      <li class="post">
++        <a href="http://www.liwenhaosuper.com/">Li Wenhao' weblog</a>
++      </li>
++      <li class="post">
+         <a href="http://wiki.secmobi.com/home">SecMobi</a>
+       </li>
+       <li class="post">
+diff --git a/source/_includes/post/sharing.html b/source/_includes/post/sharing.html
+index e32500d..13b2861 100644
+--- a/source/_includes/post/sharing.html
++++ b/source/_includes/post/sharing.html
+@@ -6,6 +6,10 @@
+   <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
+   {% endif %}
+   {% if site.facebook_like %}
+-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
++  <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+   {% endif %}
++  {% if site.share %}  
++  <h2>Share</h2>  
++  {% include post/jiathis.html %}  
++  {% endif %}  
+ </div>
+diff --git a/source/_layouts/default.html b/source/_layouts/default.html
+index f23b07b..7ac2586 100644
+--- a/source/_layouts/default.html
++++ b/source/_layouts/default.html
+@@ -1,6 +1,6 @@
+ {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+ {% include head.html %}
+-<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
++<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %} style="margin:auto">
+   <header role="banner">{% include header.html %}</header>
+   <nav role="navigation">{% include navigation.html %}</nav>
+   <div id="main">
+diff --git a/source/life/book.markdown b/source/life/book.markdown
+index f95136b..02e9faa 100644
+--- a/source/life/book.markdown
++++ b/source/life/book.markdown
+@@ -7,7 +7,15 @@ sharing: true
+ footer: true
+ ---
+ 
+-#### Before 2013:
++#### Year 2013
++
++##### Read
++
++*《惊魂14日1-5》- 宁航一（手机）
++
++##### Reading
++
++* 《新宋1》
+ 
+ ------
+ 
+diff --git a/source/life/drama.markdown b/source/life/drama.markdown
+index 3fddc36..7ffd7ef 100644
+--- a/source/life/drama.markdown
++++ b/source/life/drama.markdown
+@@ -33,5 +33,6 @@ footer: true
+ * 爱情公寓
+ * 龙门镖局
+ * 万万没想到
++* 报告老板
+ 
+ ------
+diff --git a/source/life/index.markdown b/source/life/index.markdown
+index 8317ca8..7baaf1f 100644
+--- a/source/life/index.markdown
++++ b/source/life/index.markdown
+@@ -8,5 +8,4 @@ footer: true
+ 
+ <h2 class="entry-title"><a href="{{ root_url }}/life/book.html">我读过的书</a></h2>
+ <h2 class="entry-title"><a href="{{ root_url }}/life/movie.html">我看过的电影</a></h2>
+-<h2 class="entry-title"><a href="{{ root_url }}/life/drama.html">我追过的剧</a></h2>
+-<h2 class="entry-title"><a href="{{ root_url }}/life/za.html">其它</a></h2>
++<h2 class="entry-title"><a href="{{ root_url }}/life/drama.html">我追过的剧</a></h2>
+\ No newline at end of file
+diff --git a/source/life/movie.markdown b/source/life/movie.markdown
+index b6929d0..5779424 100644
+--- a/source/life/movie.markdown
++++ b/source/life/movie.markdown
+@@ -7,7 +7,24 @@ sharing: true
+ footer: true
+ ---
+ 
+-#### Before 2013:
++#### Year 2014
++
++##### January
++
++* 金蝉脱壳
++* 全民目击
++* 爸爸去哪儿（电影院）
++
++##### February
++
++* 冰雪奇缘（电影院）
++
++##### March
++
++* 无人区
++* 囚徒
++* 怪兽大学
++* 美国骗局
+ 
+ ------
+ 
+diff --git a/source/life/za.markdown b/source/life/za.markdown
+deleted file mode 100644
+index 3ff41aa..0000000
+--- a/source/life/za.markdown
++++ /dev/null
+@@ -1,12 +0,0 @@
+----
+-layout: page
+-title: "其它"
+-date: 2013-05-26 19:50
+-comments: true
+-sharing: true
+-footer: true
+----
+-
+-#### Year 2013
+-
+-------
+diff --git a/source/notes/index.markdown b/source/notes/index.markdown
+index 0375e6f..0b05a97 100644
+--- a/source/notes/index.markdown
++++ b/source/notes/index.markdown
+@@ -11,3 +11,4 @@ footer: true
+ <h2 class="entry-title"><a href="{{ root_url }}/notes/linux_notes.html">Linux学习笔记</a></h2>
+ <h2 class="entry-title"><a href="{{ root_url }}/notes/kvm_notes.html">KVM学习笔记</a></h2>
+ <h2 class="entry-title"><a href="{{ root_url }}/notes/vmx_notes.html">VMX学习笔记</a></h2>
++<h2 class="entry-title"><a href="{{ root_url }}/notes/arm_notes.html">ARM学习笔记</a></h2>
+diff --git a/source/notes/kvm_notes.markdown b/source/notes/kvm_notes.markdown
+index 615ea7c..47a2ab2 100644
+--- a/source/notes/kvm_notes.markdown
++++ b/source/notes/kvm_notes.markdown
+@@ -489,4 +489,8 @@ cpuset表示可以运行在1，2，4，6物理CPU上，current表示启动客户
+ </domain>
+ {% endcodeblock %}
+ 
++* disk的配置
++
++* network的配置
++
+ ------
+diff --git a/source/notes/ruby_notes.markdown b/source/notes/ruby_notes.markdown
+index 3021db4..77acbc6 100644
+--- a/source/notes/ruby_notes.markdown
++++ b/source/notes/ruby_notes.markdown
+@@ -295,7 +295,7 @@ $@	      		| location of error
+ $_	 			| string last read by gets
+ $.	 			| line number last read by interpreter
+ $&	 			| string last matched by regexp
+-$~	 			| the last regexp match, as an array of subexpressions
++$~	 			| the last regexp match, as an array of subexpressionsmark
+ $n	 			| the nth subexpression in the last match (same as $~[n])
+ $=	 			| case-insensitivity flag
+ $/	 			| input record separator
+diff --git a/source/paper/index.markdown b/source/paper/index.markdown
+index c3cf1b7..a188e9d 100644
+--- a/source/paper/index.markdown
++++ b/source/paper/index.markdown
+@@ -12,8 +12,12 @@ footer: true
+ <h5><a href="{{ root_url }}/paper/raid2008wang.html">Countering Persistent Kernel Rootkits Through Systematic Hook Discovery (RAID 2008)</a></h5>
+ <h5><a href="{{ root_url }}/paper/srds2011gu.html">Process Implanting: A New Active Introspection Framework for Virtualization (SRDS 2011)</a></h5>
+ <h5><a href="{{ root_url }}/paper/dsn2013wu.html">EagleEye: Towards Mandatory Security Monitoring in Virtualized Datacenter Environment (DSN 2013)</a></h5>
++<h5><a href="{{ root_url }}/paper/oakland2012lin.html">Space Traveling across VM: Automatically Bridging the Semantic Gap in Virtual Machine Introspection via Online Kernel Data Redirection (S&P 2012)</a></h5>
++<h5><a href="{{ root_url }}/paper/ndss2014lin.html">HYBRID-BRIDGE: Efficiently Bridging the Semantic Gap in Virtual Machine Introspection via Decoupled Execution and Training Memoization (NDSS 2014)</a></h5>
+ 
+ <h2 class="entry-title">Virtualization Related</h2>
+ <h5><a href="{{ root_url }}/paper/isca2010keller.html">NoHype: Virtualized Cloud Infrastructure without the Virtualization (ISCA 2010)</a></h5>
+ <h5><a href="{{ root_url }}/paper/ccs2011szefer.html">Eliminating the Hypervisor Attack Surface for a More Secure Cloud (CCS 2011)</a></h5>
+ <h5><a href="{{ root_url }}/paper/tr2013dall.html">KVM/ARM: Experiences Building the Linux ARM Hypervisor (Technique Report 2013)</a></h5>
++<h5><a href="{{ root_url }}/paper/osdi2012belay.html">Dune: Safe User-level Access to Privileged CPU Features (OSDI 2012)</a></h5>
++<h5><a href="{{ root_url }}/paper/asplos2014criswell.html">Virtual Ghost: Protecting Applications from Hostile Operating Systems (ASPLOST 2013)</a></h5>
