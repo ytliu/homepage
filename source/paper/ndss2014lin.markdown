@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HYBRID-BRIDGE: Efficiently Bridging the Semantic Gap in Virtual Machine Introspection via Decoupled Execution and Training Memoization
+title: "HYBRID-BRIDGE: Efficiently Bridging the Semantic Gap in Virtual Machine Introspection via Decoupled Execution and Training Memoization"
 date: 2014-03-08 15:50
 comments: true
 sharing: true

@@ -1,6 +1,6 @@
-oak---
+---
 layout: page
-title: Space Traveling across VM: Automatically Bridging the Semantic Gap in Virtual Machine Introspection via Online Kernel Data Redirection
+title: "Space Traveling across VM: Automatically Bridging the Semantic Gap in Virtual Machine Introspection via Online Kernel Data Redirection"
 date: 2014-03-08 14:00
 comments: true
 sharing: true

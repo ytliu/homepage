@@ -19,15 +19,7 @@
 			"file": "source/life/book.markdown",
 			"settings":
 			{
-				"buffer_size": 1158,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/paper/index.markdown",
-			"settings":
-			{
-				"buffer_size": 1359,
+				"buffer_size": 1213,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +27,7 @@
 			"file": "source/life/movie.markdown",
 			"settings":
 			{
-				"buffer_size": 1198,
+				"buffer_size": 1306,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,39 +35,7 @@
 			"file": "source/notes/kvm_notes.markdown",
 			"settings":
 			{
-				"buffer_size": 11137,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/notes/index.markdown",
-			"settings":
-			{
-				"buffer_size": 622,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/notes/book_notes.markdown",
-			"settings":
-			{
-				"buffer_size": 165,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/notes/arm_notes.markdown",
-			"settings":
-			{
-				"buffer_size": 1875,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
-			"settings":
-			{
-				"buffer_size": 1173,
+				"buffer_size": 11162,
 				"line_ending": "Unix"
 			}
 		}
@@ -144,6 +104,24 @@
 	},
 	"file_history":
 	[
+		"/Users/luisleo/blog/octopress/source/paper/ndss2014lin.markdown",
+		"/Users/luisleo/blog/octopress/source/paper/osdi2012belay.markdown",
+		"/Users/luisleo/blog/octopress/source/paper/oakland2012lin.markdown",
+		"/Users/luisleo/blog/octopress/source/paper/asplos2014criswell.markdown",
+		"/Users/luisleo/blog/octopress/source/life/index.markdown",
+		"/Users/luisleo/blog/octopress/source/paper/index.markdown",
+		"/Users/luisleo/blog/octopress/public/paper/isca2010keller.html",
+		"/Users/luisleo/blog/octopress/source/notes/kvm_notes.markdown",
+		"/Users/luisleo/blog/octopress/source/life/drama.markdown",
+		"/Users/luisleo/blog/octopress/source/notes/arm_notes.markdown",
+		"/Users/luisleo/blog/octopress/source/notes/book_notes.markdown",
+		"/Users/luisleo/blog/octopress/source/notes/index.markdown",
+		"/Users/luisleo/blog/octopress/source/paper/osdi2012Belay.markdown",
+		"/Users/luisleo/blog/octopress/source/_posts/2014-02-22-wo-de-mei-di-chu-nu-xing.markdown",
+		"/Users/luisleo/blog/octopress/source/_posts/2013-01-06-base64bian-ma.markdown",
+		"/Users/luisleo/blog/octopress/source/_posts/2013-10-19-chinasysxiao-ji-(2013-dot-10).markdown",
+		"/Users/luisleo/blog/octopress/source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
+		"/Users/luisleo/blog/octopress/source/_posts/2013-10-04-netfilterxue-xi-bi-ji-(si-).markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2014-01-19-wo-de-2013.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-04-30-xi-tong-diao-yong-xue-xi-bi-ji-ptrace.markdown",
 		"/Users/luisleo/blog/octopress/source/notes/ruby_notes.markdown",
@@ -151,7 +129,6 @@
 		"/Users/luisleo/blog/octopress/source/_includes/asides/link.html",
 		"/Users/luisleo/blog/octopress/source/404.markdown",
 		"/Users/luisleo/blog/octopress/source/_layouts/page.html",
-		"/Users/luisleo/blog/octopress/source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2012-04-01-notes-about-ruby.markdown",
 		"/Users/luisleo/blog/octopress/Rakefile",
 		"/Users/luisleo/blog/octopress/source/notes/books/game.markdown",
@@ -165,7 +142,6 @@
 		"/Users/luisleo/id_rsa.pub",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-11-24-11yue-sui-bi.markdown",
 		"/Users/luisleo/IPADS/project/kvm/kvmcon/kvmcond-M.py",
-		"/Users/luisleo/blog/octopress/source/life/drama.markdown",
 		"/Users/luisleo/blog/octopress/public/life/movie.html",
 		"/Users/luisleo/blog/octopress/source/life/movie.markdown",
 		"/Users/luisleo/blog/octopress/source/paper/raid2007jiang.markdown",
@@ -178,7 +154,6 @@
 		"/Users/luisleo/blog/octopress/ccs2011szefer.markdown",
 		"/Users/luisleo/blog/octopress/source/paper/acmat2007xu.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-10-20-clkxiao-ji-(2013-dot-10).markdown",
-		"/Users/luisleo/blog/octopress/source/_posts/2013-10-19-chinasysxiao-ji-(2013-dot-10).markdown",
 		"/Users/luisleo/IPADS/project/tx-vmi/rebuttal",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-05-22-chinasysxiao-ji.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-08-03-what-makes-a-good-systems-paper-by-gernot-heiser-in-apsys-2013.markdown",
@@ -189,7 +164,6 @@
 		"/Users/luisleo/blog/octopress/source/_posts/2013-09-11-fork-in-multi-threaded-program.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-05-04-androidde-na-xie-shi-cyanogenmod.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-09-28-ttyde-na-xie-shi-er.markdown",
-		"/Users/luisleo/blog/octopress/source/_posts/2013-10-04-netfilterxue-xi-bi-ji-(si-).markdown",
 		"/Users/luisleo/blog/octopress/_config.yml",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-09-12-share-mouse-and-keyboard-using-synergy.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-04-09-netfilterxue-xi-bi-ji-(san-).markdown",
@@ -229,7 +203,6 @@
 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-09-aslr-in-android.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-15-dynamic-linker.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2012-12-30-qemu-study-for-android-emulator.markdown",
-		"/Users/luisleo/blog/octopress/source/_posts/2013-01-06-base64bian-ma.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-02-17-[(zhuan-)]-ji-suan-ji-de-qi-dong.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-01-dr-android-and-mr-hide-xidashiyin-fa-de-gu-shi.markdown",
 		"/Users/luisleo/blog/octopress/source/_posts/2013-03-10-redexer-and-ocaml.markdown",
@@ -250,7 +223,6 @@
 		"/Users/luisleo/blog/octopress/source/_posts/2011-12-23-paper-reading-mobile-security-survey-and-ds-failure-detection.markdown",
 		"/Users/luisleo/blog/octopress/config.rb",
 		"/Users/luisleo/blog/octopress/source/_includes/asides/about.html",
-		"/Users/luisleo/blog/octopress/source/notes/index.markdown",
 		"/Users/luisleo/blog/octopress/sass/custom/_styles.scss",
 		"/Users/luisleo/blog/octopress/source/_includes/custom/asides/about.html",
 		"/Users/luisleo/blog/octopress/source/blog/index.html",
@@ -259,19 +231,7 @@
 		"/Users/luisleo/blog/octopress/sass/custom/_fonts.scss",
 		"/Users/luisleo/blog/octopress/source/_includes/custom/head.html",
 		"/Users/luisleo/IPADS/project/OpenNebula/kvmmon/test.py",
-		"/Users/luisleo/IPADS/project/OpenNebula/kvmmon/test-cpu.py",
-		"/Users/luisleo/Test/python/pexpect-2.3/pexpect_test.py",
-		"/Users/luisleo/IPADS/project/OpenNebula/第三方验收文档/test.py",
-		"/Users/luisleo/blog/octopress/source/_posts/2013-02-23-traceview-in-android.markdown",
-		"/Users/luisleo/blog/octopress/source/stylesheets/data-table.css",
-		"/Users/luisleo/blog/octopress/source.old/_includes/head.html",
-		"/Users/luisleo/blog/octopress/source/_includes/head.html",
-		"/Users/luisleo/blog/octopress/source/_includes/custom/header.html",
-		"/Users/luisleo/blog/octopress/source/_includes/header.html",
-		"/Users/luisleo/blog/octopress/source/_includes/article.html",
-		"/Users/luisleo/blog/octopress/source/_includes/navigation.html",
-		"/Users/luisleo/blog/octopress/source/stylesheets/screen.css",
-		"/Users/luisleo/blog/octopress/source/stylesheets/screen-ori.css"
+		"/Users/luisleo/IPADS/project/OpenNebula/kvmmon/test-cpu.py"
 	],
 	"find":
 	{
@@ -289,6 +249,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"\n",
 			"game",
 			"蒋德钧",
 			"1",
@@ -330,7 +291,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -338,15 +299,15 @@
 					"file": "source/life/book.markdown",
 					"settings":
 					{
-						"buffer_size": 1158,
+						"buffer_size": 1213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								123,
-								123
+								120,
+								120
 							]
 						],
 						"settings":
@@ -361,18 +322,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "source/paper/index.markdown",
+					"file": "source/life/movie.markdown",
 					"settings":
 					{
-						"buffer_size": 1359,
+						"buffer_size": 1306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1220,
-								1358
+								133,
+								133
 							]
 						],
 						"settings":
@@ -387,156 +348,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "source/life/movie.markdown",
-					"settings":
-					{
-						"buffer_size": 1198,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1139,
-								1139
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "source/notes/kvm_notes.markdown",
 					"settings":
 					{
-						"buffer_size": 11137,
+						"buffer_size": 11162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10042,
-								10042
+								11109,
+								11109
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "source/notes/index.markdown",
-					"settings":
-					{
-						"buffer_size": 622,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "source/notes/book_notes.markdown",
-					"settings":
-					{
-						"buffer_size": 165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "source/notes/arm_notes.markdown",
-					"settings":
-					{
-						"buffer_size": 1875,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1161,
-								1161
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "source/_posts/2011-12-21-markdownyu-fa-ce-shi.markdown",
-					"settings":
-					{
-						"buffer_size": 1173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								359,
-								310
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 8,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -596,6 +425,70 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"kvm",
+				"source/notes/kvm_notes.markdown"
+			],
+			[
+				"aspl",
+				"source/paper/asplos2014criswell.markdown"
+			],
+			[
+				"oak",
+				"source/paper/oakland2012lin.markdown"
+			],
+			[
+				"osdi",
+				"source/paper/osdi2012belay.markdown"
+			],
+			[
+				"nds",
+				"source/paper/ndss2014lin.markdown"
+			],
+			[
+				"nd",
+				"source/paper/ndss2014lin.markdown"
+			],
+			[
+				"asp",
+				"source/paper/asplos2014criswell.markdown"
+			],
+			[
+				"isca",
+				"source/paper/isca2010keller.markdown"
+			],
+			[
+				"ndss",
+				"source/paper/ndss2014lin.markdown"
+			],
+			[
+				"oklan",
+				"source/paper/oakland2012lin.markdown"
+			],
+			[
+				"oakl",
+				"source/paper/oakland2012lin.markdown"
+			],
+			[
+				"asplo",
+				"source/paper/asplos2014criswell.markdown"
+			],
+			[
+				"mei-di",
+				"source/_posts/2014-02-22-wo-de-mei-di-chu-nu-xing.markdown"
+			],
+			[
+				"oaklan",
+				"source/paper/oakland2012lin.markdown"
+			],
+			[
+				"01-",
+				"source/_posts/2013-01-06-base64bian-ma.markdown"
+			],
+			[
+				"wo-de-mei",
+				"source/_posts/2014-02-22-wo-de-mei-di-chu-nu-xing.markdown"
+			],
 			[
 				"wo-de",
 				"source/_posts/2014-01-19-wo-de-2013.markdown"
@@ -659,10 +552,6 @@
 			[
 				"sui",
 				"source/_posts/2013-11-24-11yue-sui-bi.markdown"
-			],
-			[
-				"kvm",
-				"source/notes/kvm_notes.markdown"
 			],
 			[
 				"dra",
@@ -1047,66 +936,6 @@
 			[
 				"qiaoban",
 				"source/_posts/2013-01-12-qiao-bang-zhu-chuan-you-gan.markdown"
-			],
-			[
-				"base64",
-				"source/_posts/2013-01-06-base64bian-ma.markdown"
-			],
-			[
-				"qem",
-				"source/_posts/2012-12-30-qemu-study-for-android-emulator.markdown"
-			],
-			[
-				"qemu",
-				"source/_posts/2012-12-30-qemu-study-for-android-emulator.markdown"
-			],
-			[
-				"2012-12",
-				"source/_posts/2012-12-15-dynamic-linker.markdown"
-			],
-			[
-				"12-15",
-				"source/_posts/2012-12-15-dynamic-linker.markdown"
-			],
-			[
-				"common",
-				"server/src/com/mwr/mercury/Common.java"
-			],
-			[
-				"acti",
-				"server/src/com/mwr/mercury/commands/Activity.java"
-			],
-			[
-				"serverser",
-				"server/src/com/mwr/mercury/ServerService.java"
-			],
-			[
-				"server",
-				"server/src/com/mwr/mercury/Server.java"
-			],
-			[
-				"session",
-				"server/src/com/mwr/mercury/Session.java"
-			],
-			[
-				"pack",
-				"server/src/com/mwr/mercury/commands/Packages.java"
-			],
-			[
-				"xml",
-				"server/src/com/mwr/mercury/XML.java"
-			],
-			[
-				"buffer",
-				"server/src/com/mwr/mercury/BufferedBracketReader.java"
-			],
-			[
-				"shell",
-				"server/src/com/mwr/mercury/Shell.java"
-			],
-			[
-				"servers",
-				"server/src/com/mwr/mercury/ServerService.java"
 			]
 		],
 		"width": 0.0

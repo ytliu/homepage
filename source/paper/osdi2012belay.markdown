@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dune: Safe User-level Access to Privileged CPU Features
+title: "Dune: Safe User-level Access to Privileged CPU Features"
 date: 2014-03-08 14:50
 comments: true
 sharing: true

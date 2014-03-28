@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Virtual Ghost: Protecting Applications from Hostile Operating Systems
+title: "Virtual Ghost: Protecting Applications from Hostile Operating Systems"
 date: 2014-03-08 16:30
 comments: true
 sharing: true
