@@ -28,7 +28,7 @@ And now Libvmi provide 3 ways to support KVM introspection:
 
 In this blog, I'll not consider the GDB method since it will introduce much overhead, and only discuss about the second QEMU-KVM patch way. While the third Shm-snapshot will be introduced in the future.
 
-So as far as I'm concerned, why Libvmi require apply a qemu patch to introspect KVM virtual machine is for following reasons:
+So as far as I'm concerned, why Libvmi require applying a qemu patch to introspect KVM virtual machine is for following reasons:
 
 * Libvmi use libvirt framework API to manage and get data from guest virtual machine;
 * However, unlike libxenctrl used in Xen, libvirt for KVM does not provide any API to map Guest Physical Address (GPA) to Host Virtual Address (HVA);
@@ -38,7 +38,7 @@ So what the patch actually do is use Qemu Machine Protocal (QMP) mechanism for l
 
 ------
 
-Actually the patch are used for some specific qemu version, so I think I should just tell out why it works, and how to make it work in general.
+Actually the patch are used for some specific qemu versions, so I think I should just tell why it works, and how to make it work in general.
 
 #### Create a connection inside Qemu for Libvmi to communicate
 
@@ -283,7 +283,7 @@ Note that the code we need here is:
 
 the other code between `SQMP` and `EQMP` are just added to the documentation. But it is required!
 
-After add this command to Qemu QMP, we can invoke `do_physical_memory_access()` outside of Qemu using such format shown in Example section:
+After adding this command to Qemu QMP, we can invoke `do_physical_memory_access()` outside of Qemu using such format shown in Example section:
 
 {% codeblock lang:xml %}
 -> { "execute": "pmemaccess",
@@ -291,7 +291,7 @@ After add this command to Qemu QMP, we can invoke `do_physical_memory_access()` 
 <- { "return": {} }
 {% endcodeblock %}
 
-For example, in Libvmi, you can find how it invoke this in `libvmi/driver/kvm.c` file:
+For example, in Libvmi, you can find how it invokes this in `libvmi/driver/kvm.c` file:
 
 {% codeblock lang:c %}
 //
@@ -333,7 +333,7 @@ exec_memory_access(
 
 {% endcodeblock %}
 
-And when it need to read a page, it need to map from GPA to HVA, then the libvmi will follow the control from:
+And when it needs to read a page, it needs to map from GPA to HVA, then the libvmi will follow the control from:
 
   vmi_read_va -> (get GPA from vmi_translate_uv2p) -> kvm_read_page -> memory_cache_insert -> 
   create_new_entry -> get_memory_data -> get_memory_callback -> kvm_get_memory_patch
@@ -388,7 +388,7 @@ So it uses the socket_fd to communicate with the connection openned in Qemu to i
 
 ------
 
-Above are the principle how Qemu-patch work in Libvmi for KVM support, you can find the whole patch [here](https://github.com/bdpayne/libvmi/tree/master/tools/qemu-kvm-patch), now it only support 0.14 and 1.2 versions. If you know how it work, you can modify the patch and apply your own Qemu version. For example, following is my patch for the Qemu in stable-1.6 branch, e82ee0845c3240541e79b9b521779b3f8743f1b4 commit:
+Above are the principle how Qemu-patch work in Libvmi for KVM support, you can find the whole patch [here](https://github.com/bdpayne/libvmi/tree/master/tools/qemu-kvm-patch), now it only support 0.14 and 1.2 versions. If you know how it works, you can modify the patch and apply your own Qemu version. For example, following is my patch for the Qemu in stable-1.6 branch, e82ee0845c3240541e79b9b521779b3f8743f1b4 commit:
 
 {% codeblock lang:c %}
  diff --git a/Makefile.target b/Makefile.target
@@ -699,21 +699,21 @@ index cf47e3f..41b3e1b 100644
 
 After we apply the Qemuu patch, we can re-compile the Qemu:
 
-  $ cd qemu
-  $ ./configure
-  $ make -jj4
-  $ sudo make install
+    $ cd qemu
+    $ ./configure
+    $ make -jj4
+    $ sudo make install
 
 In addition, as said in the Libvmi READM, you need to make sure your libvirt version is 0.8.7 or newer, and you should sure that the libvirt installation supports QMP commands, which can be done by install libyajl-dev (take my Debian as an example):
 
-  $ sudo aptitude install libyajl-dev
-  $ cd libvirt
-  $ ./configure
+    $ sudo aptitude install libyajl-dev
+    $ cd libvirt
+    $ ./configure
 
 And ensure that the configure script reports that it found yajl. Then you should compile the libvirt
 
-  $ make -j4
-  $ sudo make install
+    $ make -j4
+    $ sudo make install
 
 After that, you can setup libvmi as before.
 
