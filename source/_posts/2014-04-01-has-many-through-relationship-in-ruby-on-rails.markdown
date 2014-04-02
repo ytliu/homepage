@@ -8,7 +8,7 @@ categories: RoR
 
 Recently for some specific reasons I'm studying Ruby on Rails (RoR). One day I was stuck in a problem about how to handle many-to-many relationship.
 
-Let's firstly see my example:
+At first, let's have a look at the example:
 
 Suppose there're two models: `User` and `Skill`, a user can have many skills, and a skill may belong to many users. what's more, the proficiency of skills owned by different users may be different. For example, user-1 may be primary in skill_1 and normal in skill_2, while user-2 may be professional in skill_1, and primary in skill_2. 
 

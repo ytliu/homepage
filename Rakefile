@@ -11,7 +11,7 @@ ssh_port       = "22"
 document_root  = "~/ytliu.info/"
 rsync_delete   = true
 deploy_default = "push"
-rsync_delete   = false
+#rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
